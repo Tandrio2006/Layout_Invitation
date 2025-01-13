@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="right-col">
+            <img src="image/play.png" id="icon">
+
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="media/song.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "image/pause.png";
+            }else{
+                mySong.pause();
+                icon.src = "image/play.png";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasangan Mempelai</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="couple-section">
+    <h2><span>Pasangan</span> Mempelai</h2>
+    <p class="description">
+      Dengan segala puji bagi Allah yang telah menciptakan makhluk-Nya berpasang-pasangan,
+      Ya Allah izinkanlah kami merangkai cinta yang Engkau berikan dalam ikatan pernikahan
+    </p>
+
+    <div class="couple-container">
+      <div class="person">
+        <img src="image/photo.jpeg" alt="Ramdan Aditia">
+        <h3>Ramdan Aditia</h3>
+        <p>Putra dari pasangan</p>
+        <p>Bapak Sodikin</p>
+        <p>& Ibu Oneng</p>
+        <p class="social">@ramdanaditia_</p>
+      </div>
+
+      <div class="separator">
+        <span>dengan</span>
+      </div>
+
+      <div class="person">
+        <img src="image/photo.jpeg" alt="Yuliyana Sari">
+        <h3>Yuliyana Sari</h3>
+        <p>Putri dari pasangan</p>
+        <p>Bapak Tatang</p>
+        <p>& Ibu Lilis Atikah</p>
+        <p class="social">@yuliynsr</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>-->
