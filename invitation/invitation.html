@@ -9,7 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Birthstone&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Oleo+Script:wght@400;700&family=Pacifico&family=Redressed&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Birthstone&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Oleo+Script:wght@400;700&family=Pacifico&family=Redressed&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
     <link rel="stylesheet" href="style.css">
@@ -17,10 +17,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-    <section id="menu" style="display: none;">
+<body style="background-color: #F8F5E8;">
+    <section id="menu">
         <div class="menu-container">
             <div class="fadein">
                 <div class="menu-options">
@@ -38,132 +39,136 @@
             </div>
     </section>
     <section id="hero"
-        class="hero w-100 h-100 mx-auto p-3 text-center d-flex justify-content-center align-items-center text-white section">
-        <div class="fadein">
-            <main>
-                <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
-                <h1>Tandrio & Pengantin </h1>
-                <p>Akan melangsungkan resepsi pernikahan dalam: </p>
-                <div class="simply-countdown"></div>
-                <button id="lihatUndanganBtn" class="btn btn-lg mt-4">
-                    <i class="fa-regular fa-envelope-open"></i> Lihat Undangan
-                </button>
-            </main>
-        </div>
-    </section>
-    <section id="undanganSection" class="undangan-section text-center" style="display: none;">
+    class="hero w-100 h-100 mx-auto p-3 text-center d-flex justify-content-center align-items-center text-white section">
+    <div class="fadein" data-aos="fade-up" data-aos-duration="1000">
+        <main>
+            <h4 data-aos="fade-in" data-aos-delay="200">Kepada Bapak/Ibu/Saudara/i,</h4>
+            <h1 data-aos="zoom-in" data-aos-delay="400">Tandrio & Pengantin</h1>
+            <p data-aos="fade-up" data-aos-delay="600">Akan melangsungkan resepsi pernikahan dalam:</p>
+            <div class="simply-countdown" data-aos="fade-up" data-aos-delay="800"></div>
+            <button id="lihatUndanganBtn" class="btn btn-lg mt-4" data-aos="fade-in" data-aos-delay="1000">
+                <i class="fa-regular fa-envelope-open"></i> Lihat Undangan
+            </button>
+        </main>
+    </div>
+</section>
+    <section id="undanganSection" class="undangan-section text-center">
         <div id="page">
             <div id="fh5co-couple">
                 <div class="container section" id="married">
                     <div class="row">
                         <div class="text-center fh5co-heading animate-box">
-                            <h2>Assalamu'alaikum Wr. Wb.</h2>
-                            <p style="color: #bf9b73;">Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
-                                serta Kerabat sekalian untuk menghadiri acara pernikahan kami:</p>
+                            <h2 data-aos="zoom-in" data-aos-duration="1000">Assalamu'alaikum Wr. Wb.</h2>
+                            <p style="color: #666666;" data-aos="fade-up" data-aos-duration="1200">
+                                Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian
+                                untuk menghadiri acara pernikahan kami:
+                            </p>
                         </div>
                     </div>
                     <div class="couple-wrap animate-box">
-
-                        <div class="couple-half">
+                        <div class="couple-half" data-aos="fade-right" data-aos-duration="1000">
                             <div class="bride">
-                                <img src="image/Wedding.jpg" alt="groom" class="img-responsive">
+                                <img src="image/Wedding.jpg" alt="groom" class="img-responsive" data-aos="zoom-in">
                             </div>
-                            <div class="desc-bride">
+                            <div class="desc-bride" data-aos="fade-up" data-aos-duration="1000">
                                 <h3>Maulidan Nashuha</h3>
-                                <p><span style="color: #bf9b73">Putra Kedua dari</span><br>
+                                <p>
+                                    <span style="color: #bf9b73">Putra Kedua dari</span><br>
                                     <span class="parents-font" style="font-family:Dancing Script, serif;">Bapak Asri
                                         Abdurrahman</span><br>
                                     <span class="parents-font" style="font-family:Dancing Script, serif;">Ibu
                                         Marliana</span>
                                 </p>
-                                <div id="social-media-molid">
-                                    <ul class="fh5co-social-icons">
-                                        <li><a target="_blank" href="https://github.com/maulidandev"><i
-                                                    class="fa-brands fa-github"></i></a></li>
-                                        <li><a target="_blank" href="https://www.linkedin.com/in/maulidandev/"><i
-                                                    class="fa-brands fa-linkedin"></i></a></li>
-                                        <li><a target="_blank" href="https://www.instagram.com/maulidannashuha/"><i
-                                                    class="fa-brands fa-instagram"></i></a></li>
-                                        <li><a target="_blank" href="https://www.facebook.com/maulidannashuha"><i
-                                                    class="fa-brands fa-facebook"></i></a></li>
-                                        <li><a target="_blank" href="https://twitter.com/ngodingsolusi"><i
-                                                    class="fa-brands fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
 
-                        <h2 class="icon-groom">&</h2>
+                        <h2 class="icon-groom" data-aos="zoom-in" data-aos-duration="1000">&</h2>
 
-                        <div class="couple-half">
-                            <div class="desc-bride">
+                        <div class="couple-half" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="desc-bride" data-aos="fade-up" data-aos-duration="1000">
                                 <h3>Aisyah Humaira</h3>
-                                <p><span style="color: #bf9b73">Putri Pertama dari</span><br>
+                                <p>
+                                    <span style="color: #bf9b73">Putri Pertama dari</span><br>
                                     <span class="parents-font" style="font-family:Dancing Script, serif;">Bapak Ahmad
                                         Fauzi</span><br>
                                     <span class="parents-font" style="font-family:Dancing Script, serif;">Ibu Siti
                                         Khadijah</span>
                                 </p>
-                                <div id="social-media-aisyah">
-                                    <ul class="fh5co-social-icons">
-                                        <li><a target="_blank" href="https://www.instagram.com/aisyahhumaira/"><i
-                                                    class="fa-brands fa-instagram"></i></a></li>
-                                        <li><a target="_blank" href="https://www.facebook.com/aisyahhumaira"><i
-                                                    class="fa-brands fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="quote-section">
-            <p class="quote-text">"Mereka akan menjadi suami istri yang berlimpah berkah keberuntungan Apabila keduanya memiliki: Keyakinan, kedermawanan, keterampilan, Ucapan saling mencintai satu sama lain dan hidup sesuai dengan Dhamma."</p>
-            <p class="quote-source">(Angutara Nikaya Bab VI.3; Sutta ke 53)</p>
         </div>
-        <div class="containers section" id="calender">
-            <h1>Tempat dan Waktu</h1>
+        <div class="quote-section" data-aos="fade-in" data-aos-duration="1000">
+            <p class="quote-text" data-aos="fade-up" data-aos-duration="1200">
+                "Mereka akan menjadi suami istri yang berlimpah berkah keberuntungan Apabila keduanya
+                memiliki: Keyakinan, kedermawanan, keterampilan, Ucapan saling mencintai satu sama lain dan hidup sesuai
+                dengan Dhamma."
+            </p>
+            <p class="quote-source" data-aos="fade-up" data-aos-duration="1400">
+                (Angutara Nikaya Bab VI.3; Sutta ke 53)
+            </p>
+        </div>
 
-            <div class="event-container">
-                <div class="event-card">
-                    <h2>AKAD</h2>
-                    <p>Minggu, 23 Juni 2024<br>08.00 WIB - Selesai</p>
-                    <div class="map">
+        <div class="containers section" id="calender" data-aos="fade-up" data-aos-duration="1000">
+            <h1 style="color: #bf9b73;" data-aos="zoom-in" data-aos-duration="1200">Tempat dan Waktu</h1>
+
+            <div class="event-container" data-aos="fade-up" data-aos-duration="1400">
+                <div class="event-card" data-aos="fade-right" data-aos-duration="1200">
+                    <h2 data-aos="zoom-in" data-aos-duration="1400">AKAD</h2>
+                    <p data-aos="fade-up" data-aos-duration="1600">
+                        Minggu, 23 Juni 2024<br>08.00 WIB - Selesai
+                    </p>
+                    <div class="map" data-aos="fade-up" data-aos-duration="1800">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24987.523941708336!2d104.03009248498188!3d1.1173941644051053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9896b04a72593%3A0x6f022eb0aedf5969!2sKedai%20Kopi%20Aroma!5e1!3m2!1sid!2sid!4v1736496936969!5m2!1sid!2sid"
                             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    <p class="address"><i>NoLimit Indonesia<br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec.
-                            Sukajadi,
-                            Kota Bandung, Jawa Barat 40163</i></p>
-                    <button class="location-btn"><i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi</button>
+                    <p class="address" data-aos="fade-up" data-aos-duration="2000">
+                        <i>NoLimit Indonesia<br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi,
+                            Kota Bandung, Jawa Barat 40163</i>
+                    </p>
+                    <button class="location-btn" data-aos="zoom-in" data-aos-duration="2200">
+                        <i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi
+                    </button>
                 </div>
 
-                <div class="event-card">
-                    <h2>RESEPSI</h2>
-                    <p>Minggu, 23 Juni 2024<br>10.00 WIB - Selesai</p>
-                    <div class="map">
+                <div class="event-card" data-aos="fade-left" data-aos-duration="1200">
+                    <h2 data-aos="zoom-in" data-aos-duration="1400">RESEPSI</h2>
+                    <p data-aos="fade-up" data-aos-duration="1600">
+                        Minggu, 23 Juni 2024<br>10.00 WIB - Selesai
+                    </p>
+                    <div class="map" data-aos="fade-up" data-aos-duration="1800">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4679.842876092189!2d104.02277998319468!3d1.1363410031593042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98976f612502f%3A0x785768fdf2df3d7c!2sIndah%20Industrial%20Park!5e1!3m2!1sid!2sid!4v1736497149271!5m2!1sid!2sid"
                             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    <p class="address"><i>NoLimit Indonesia<br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec.
-                            Sukajadi,
-                            Kota Bandung, Jawa Barat 40163</i></p>
-                    <button class="location-btn"><i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi</button>
+                    <p class="address" data-aos="fade-up" data-aos-duration="2000">
+                        <i>NoLimit Indonesia<br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi,
+                            Kota Bandung, Jawa Barat 40163</i>
+                    </p>
+                    <button class="location-btn" data-aos="zoom-in" data-aos-duration="2200">
+                        <i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="contain section" id="gallery">
-            <h1 class="Judul"><span class="highlight">Moment</span> Bahagia Kami</h1>
-            <p class="quote"><i>"Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi,
-                    selama aku mampu, mimpi-mimpi kita adalah prioritas."</i></p>
+        <div class="contain section" id="gallery" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="Judul" data-aos="zoom-in" data-aos-duration="1200"><span class="highlight">Moment</span> Bahagia
+                Kami</h1>
+            <p class="quote" data-aos="fade-up" data-aos-duration="1400">
+                <i>"Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi,
+                    selama aku mampu, mimpi-mimpi kita adalah prioritas."</i>
+            </p>
 
             <!-- Box khusus untuk galeri -->
-            <div class="gallery-box">
+            <div class="gallery-box" data-aos="fade-up" data-aos-duration="1600">
                 <div class="gallery">
                     <div class="gallery-item"><img src="image/image1.jpg" alt="Moment 1"></div>
                     <div class="gallery-item"><img src="image/image2.jpg" alt="Moment 2"></div>
@@ -184,39 +189,43 @@
                 </div>
             </div>
         </div>
-        <div class="Gifts">
+
+        <div class="Gifts" data-aos="fade-up" data-aos-duration="1000">
             <!-- Love Gift Section -->
             <section class="love-gift">
-                <h2>Love Gift</h2>
-                <p><i>Dengan hormat, bagi Anda yang ingin memberikan tanda kasih kepada kami, dapat melalui:</i></p>
-                <div class="bank-card">
+                <h2 data-aos="zoom-in" data-aos-duration="1200">Love Gift</h2>
+                <p data-aos="fade-up" data-aos-duration="1400"><i>Dengan hormat, bagi Anda yang ingin memberikan tanda
+                        kasih kepada kami, dapat melalui:</i></p>
+                <div class="bank-card" data-aos="fade-up" data-aos-duration="1600">
                     <div class="bank-info">
                         <img src="image/BCA.png" alt="BCA">
                         <p id="bca-number">123-456-7890</p>
                         <p>Nama Wahyu Siapa</p>
                     </div>
-                    <button class="copy-button" onclick="copyToClipboard('bca-number')">📋 Salin</button>
+                    <button class="copy-button" onclick="copyToClipboard('bca-number')" data-aos="zoom-in"
+                        data-aos-duration="1800">📋 Salin</button>
                 </div>
-                <div class="bank-card">
+                <div class="bank-card" data-aos="fade-up" data-aos-duration="2000">
                     <div class="bank-info">
                         <img src="image/BNI.png" alt="BNI">
                         <p id="bni-number">987-654-3210</p>
                         <p>Nama Riski Siapa</p>
                     </div>
-                    <button class="copy-button" onclick="copyToClipboard('bni-number')">📋 Salin</button>
+                    <button class="copy-button" onclick="copyToClipboard('bni-number')" data-aos="zoom-in"
+                        data-aos-duration="2200">📋 Salin</button>
                 </div>
-
             </section>
 
+
             <!-- Ucapan & Doa Section -->
-            <section class="ucapan-doa section" id="comment">
-                <h2>Ucapan & Doa</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
+            <section class="ucapan-doa section" id="comment" data-aos="fade-up" data-aos-duration="1000">
+                <h2 style="color:  #bf9b73;" data-aos="zoom-in" data-aos-duration="1200">Ucapan & Doa</h2>
+                <form action="#" method="post" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="form-group" data-aos="fade-up" data-aos-duration="1600">
                         <label for="name">Nama</label>
                         <input type="text" id="name" name="name" placeholder="Masukkan nama Anda">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-up" data-aos-duration="1800">
                         <label for="presensi">Presensi</label>
                         <select id="presensi" name="presensi">
                             <option value="">Konfirmasi Presensi</option>
@@ -224,132 +233,86 @@
                             <option value="tidak_hadir">Tidak Hadir</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-up" data-aos-duration="2000">
                         <label for="comment">Komentar</label>
                         <textarea id="comment" name="comment" placeholder="Tulis komentar Anda"></textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" data-aos="fade-up" data-aos-duration="2200">
                         <label for="doa">Ucapan & Doa</label>
                         <textarea id="doa" name="doa" placeholder="Tulis Ucapan dan Doa"></textarea>
                     </div>
-                    <button type="submit" class="send-button">📨 Send</button>
+                    <button type="submit" class="send-button" data-aos="zoom-in" data-aos-duration="2400">📨
+                        Send</button>
                 </form>
             </section>
         </div>
-        <div class="box-comment">
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">test</span>
-                    <span class="time">2 jam yang lalu</span>
+        <section class="message section" id="comment" data-aos="fade-up" data-aos-duration="1000">
+            <div class="messages-container" data-aos="fade-up" data-aos-duration="1200">
+                <div class="message-card">
+                    <h3>Tandrio</h3>
+                    <p>dwdawdwa</p>
+                    <span>08/01/2025 16:56:39</span>
                 </div>
-                <div class="comment-body">
-                    SEemoga Samawa
+                <div class="message-card">
+                    <h3>Magician Smanda</h3>
+                    <p>Happy Wedding buat bang Fahmi dan kakak Fahira.</p>
+                    <span>10/10/2024 14:08:00</span>
                 </div>
-                <button class="reply-btn">Reply</button>
+                <div class="message-card">
+                    <h3>Bidan Witri</h3>
+                    <p>Selamat menempuh hidup baru, semoga jadi keluarga sakinah, mawaddah, warohmah.</p>
+                    <span>05/10/2024 22:16:46</span>
+                </div>
+                <div class="message-card">
+                    <h3>Tandrio</h3>
+                    <p>dwdawdwa</p>
+                    <span>08/01/2025 16:56:39</span>
+                </div>
+                <div class="message-card">
+                    <h3>Magician Smanda</h3>
+                    <p>Happy Wedding buat bang Fahmi dan kakak Fahira.</p>
+                    <span>10/10/2024 14:08:00</span>
+                </div>
+                <div class="message-card">
+                    <h3>Bidan Witri</h3>
+                    <p>Selamat menempuh hidup baru, semoga jadi keluarga sakinah, mawaddah, warohmah.</p>
+                    <span>05/10/2024 22:16:46</span>
+                </div>
             </div>
+        </section>
 
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">laka</span>
-                    <span class="time">9 jam yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    test
-                </div>
-                <button class="reply-btn">Reply</button>
-            </div>
+      <div class="thank-you" data-aos="fade-down" data-aos-duration="1000">
+        TERIMA KASIH<br>
+        ATAS KEHADIRAN DAN DOA RESTUNYA<br>
+        KAMI YANG BERBAHAGIA
+    </div>
 
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">happy wedding</span>
-                    <span class="time">9 jam yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    Happy wedding
-                </div>
-                <button class="reply-btn">Reply (2)</button>
-            </div>
+    <div class="couple-name" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1200">
+        Ramdani & Yuli
+    </div>
 
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">test test</span>
-                    <span class="time">17 jam yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    test
-                </div>
-                <button class="reply-btn">Reply</button>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">Teman teman semua</span>
-                    <span class="time">20 jam yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    test
-                </div>
-                <button class="reply-btn">Reply (1)</button>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">Sangsaka</span>
-                    <span class="time">23 jam yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    info biar bisa dipake gratis dong template nya
-                </div>
-                <button class="reply-btn">Reply</button>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <span class="name">sdfsdfsdfsdf</span>
-                    <span class="time">1 hari yang lalu</span>
-                </div>
-                <div class="comment-body">
-                    asdasdasd
-                </div>
-                <button class="reply-btn">Reply (1)</button>
-            </div>
-
-            <div class="pagination">
-                <a href="#" class="prev">&#8592; Prev</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#" class="next">Next &#8594;</a>
+    <div class="content">
+        <div class="fadein">
+            <div class="right-col">
+                <img src="image/play.png" id="icon">
             </div>
         </div>
-        <div class="thank-you">
-            TERIMA KASIH<br>
-            ATAS KEHADIRAN DAN DOA RESTUNYA<br>
-            KAMI YANG BERBAHAGIA
+        <audio id="mySong">
+            <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+        <div class="copyright">
+            Tandrio Digital<br>
+            SmartApps Care &copy; 2025. All Rights Reserved
         </div>
-        <div class="couple-name">
-            Ramdani & Yuli
+        <div class="social-icons" data-aos="fade-up" data-aos-delay="1000">
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#" target="_blank"><i class="fa-solid fa-phone-volume"></i> </a>
         </div>
-        <div class="content">
-            <div class="fadein">
-                <div class="right-col">
-                    <img src="image/play.png" id="icon">
-                </div>
-            </div>
-            <audio id="mySong">
-                <source src="media/song.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <footer class="footer">
-            <div class="copyright">
-                Tandrio Digital<br>
-                SmartApps Care &copy; 2025. All Rights Reserved
-            </div>
-            <div class="social-icons">
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a>
-                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> </a>
-                <a href="#" target="_blank"><i class="fa-solid fa-phone-volume"></i> </a>
-            </div>
-        </footer>
+    </footer>
 
     </section>
 
@@ -372,9 +335,6 @@
         $("#lihatUndanganBtn").on("click", function () {
             $("#hero").hide();
 
-            $("#undanganSection").show();
-            $("#menu").show();
-
             $('html, body').animate({
                 scrollTop: $("#undanganSection").offset().top
             }, 500);
@@ -391,7 +351,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
 </body>
 
 </html>

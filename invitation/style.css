@@ -61,7 +61,6 @@ body {
 
 .hero a i {
     margin-right: 10px; 
-    color: #f30fc2;
     transition: color 0.3s ease; 
 }
   
@@ -74,15 +73,19 @@ body {
     position: relative;
     margin-top: 30px;
     text-decoration: none;
-    border: 2px solid rgb(243, 15, 194);
-    font-size: 19px;
-    color: rgb(243, 15, 194);
+    border: 2px solid #ffffff;
+    font-size: 16px;
+    color: #ffffff;
     padding: 13px 16px;
     display: inline-block;
     letter-spacing: 1px;
     cursor: pointer;
     overflow: hidden;
     transition: color 0.3s ease;
+    border-radius:50px;
+    backdrop-filter: blur(5px); 
+    background: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
   
 .hero .btn::before {
@@ -93,7 +96,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background:rgb(243, 15, 194);
+    background: #bf9b73;
     z-index: -1;
     transition: transform 0.7s;
     transform-origin: 0 0;
@@ -102,7 +105,8 @@ body {
 }
   
 .hero .btn:hover {
-    color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
   
 .hero .btn:hover::before {
@@ -165,7 +169,6 @@ body {
   position: relative;
   text-align: center;
 }
-
 #fh5co-couple .container {
   position: relative;
 }
@@ -179,7 +182,7 @@ body {
   font-family: "Dancing Script", serif;
   font-size: 40px;
   margin-bottom: 25px;
-  color: #444;
+  color: #bf9b73;
 }
 
 .fh5co-heading p {
@@ -203,8 +206,8 @@ body {
 
 .couple-half img {
   border-radius:10px;
-  width: 600px;
-  height: 500px;
+  width: 620px;
+  height: 420px;
   margin-bottom: 20px;
 }
 
@@ -254,11 +257,11 @@ body {
   margin:20px;
 }
 .quote-section {
-  background-color: #d0c4b7;
+  background-color: #bf9b73;
   color: #fff;
   text-align: center;
   padding: 100px;
-  margin: 20px auto;
+  margin: auto;
   max-width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -274,7 +277,7 @@ body {
 .quote-source {
   font-size: 16px;
   font-weight: bold;
-  color: #555;
+  color: #444;
 }
 
 .containers {
@@ -285,7 +288,8 @@ body {
 
 .containers h1 {
   font-size: 3rem;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   font-family: "Great Vibes", serif;
 }
 
@@ -311,6 +315,7 @@ body {
   font-family: "Oleo Script", serif;
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #bf9b73;
 }
 
 .event-card p {
@@ -329,7 +334,7 @@ body {
 }
 
 .location-btn {
-  background-color: #f30;
+  background-color: #bf9b73;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -346,7 +351,7 @@ body {
 }
 
 .location-btn:hover {
-  background-color: #d10;
+  background-color:rgb(126, 102, 75);
 }
 .contain {
   max-width: 1200px;
@@ -361,7 +366,7 @@ body {
 }
 
 .highlight {
-  color: #0088ff;
+  color: #bf9b73;
   
 }
 
@@ -369,6 +374,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 20px;
   font-style: italic;
+  color: #666666;
 }
 
 .gallery-box {
@@ -378,6 +384,8 @@ body {
   border: 2px solid #444;
   border-radius: 10px;
   overflow-y: auto; 
+  scrollbar-width: thin; 
+  scrollbar-color: #d4a373 #f8f8f8;
   padding: 10px;
   background-color: #222; 
 }
@@ -417,18 +425,20 @@ body {
   font-family: "Great Vibes", serif;
   text-align: center;
   margin-bottom: 10px;
+  color: #bf9b73;
 }
 
 .love-gift p {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.1rem;
+  color: #666666;
 }
 
 .bank-card {
   display: flex;
   justify-content: space-between;
-  background-color: #333;
+  background-color: #bf9b73;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -437,7 +447,7 @@ body {
 
 .bank-info img {
   width: 80px;
-  margin-right: 15px;
+  margin-right: 20px;
   background-color: white; 
   padding: 10px; 
   border-radius: 2px; 
@@ -451,7 +461,7 @@ body {
 }
 
 .copy-button {
-  background-color: #555;
+  background-color:rgb(145, 117, 85);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -461,7 +471,7 @@ body {
 }
 
 .copy-button:hover {
-  background-color: #777;
+  background-color: rgb(75, 55, 33);
 }
 
 .ucapan-doa h2 {
@@ -473,7 +483,7 @@ body {
 }
 
 form {
-  background-color: #333;
+  background-color: #bf9b73;
   padding: 20px;
   border-radius: 10px;
 }
@@ -495,8 +505,6 @@ input, select, textarea {
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #555;
-  color: #fff;
 }
 
 textarea {
@@ -513,7 +521,7 @@ textarea::placeholder {
 .send-button {
   display: block;
   width: 100%;
-  background-color: #0066ff;
+  background-color:rgb(206, 147, 79);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -523,103 +531,19 @@ textarea::placeholder {
 }
 
 .send-button:hover {
-  background-color: #0055cc;
-}
-.box-comment {
-  max-width: 68.1%;
-  margin: 20px auto;
-  padding: 0 20px;
+  background-color: rgb(134, 100, 61);
 }
 
-.comment {
-  background: #2e2e3e;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.comment-header .name {
-  font-weight: bold;
-  color: #0066ff;
-  font-size: 1rem;
-}
-
-.comment-header .time {
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-.comment-body {
-  margin-bottom: 12px;
-  line-height: 1.5;
-  color: #ffffff;
-  text-align:left;
-  font-size: 1rem;
-}
-
-.reply-btn {
-  color: #0066ff;
-  text-decoration: none;
-  font-weight: bold;
-  align-self: flex-start;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.reply-btn:hover {
-  text-decoration: underline;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 8px;
-}
-
-.pagination a {
-  text-decoration: none;
-  color: rgb(0, 123, 255);
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  background: #2e2e3e;
-  border: 1px solid rgb(0, 123, 255);
-}
-
-.pagination a:hover {
-  background: rgb(0, 123, 255);
-  color: #fff;
-}
-
-.pagination .active {
-  background: rgb(0, 123, 255);
-  color: #fff;
-  pointer-events: none;
-}
 .footer {
   text-align: center;
   padding: 40px 20px;
-  background-color: #1e1e1e;
+  background-color: rgb(173, 142, 105);
   height:250px;
 }
 
 .thank-you {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Host Grotesk", serif;
   line-height: 1.5;
   margin-bottom: 20px;
   margin-top:80px;
@@ -631,10 +555,66 @@ textarea::placeholder {
   margin-bottom: 20px;
 }
 
+section.message.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.messages-container {
+  width: 100%;
+  max-width: 1050px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #bf9b73;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; 
+  scrollbar-width: thin; 
+  scrollbar-color: #d4a373 #f8f8f8;
+}
+
+.message-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.message-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.message-card p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.message-card span {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+}
+
 .footer .copyright {
   font-size: 1rem;
   margin-bottom: 20px;
-  color: #999;
+  color:rgb(255, 255, 255);;
 }
 
 .footer .social-icons {
@@ -651,7 +631,7 @@ textarea::placeholder {
 }
 
 .footer .social-icons a:hover {
-  color: #4caf50;
+  color: #666666;
 }
 
 .menu-container {
@@ -667,14 +647,14 @@ textarea::placeholder {
 .menu-options {
   display: flex;
   gap: 15px;
-  background-color: #f14e95;
+  background-color: #bf9b73;
   padding: 10px 15px;
   border-radius: 30px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-options button {
-  background-color: #f14e95;
+  background-color: #bf9b73;
   color: white;
   border: none;
   width: 40px;
@@ -690,12 +670,12 @@ textarea::placeholder {
 
 .menu-options button:hover {
   transform: scale(1.1);
-  background-color:rgb(255, 29, 127);
+  background-color:rgb(153, 125, 93);
   border: 1px solid #ffffff;
 }
 .menu-button.active {
   transform: scale(1.1);
-  background-color:rgb(255, 29, 127);
+  background-color:rgb(153, 125, 93);
   border: 1px solid #ffffff;
 }
 
@@ -919,8 +899,6 @@ textarea::placeholder {
     font-size: 1.3rem;
   }
   .copy-button {
-    background-color: #555;
-    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -967,6 +945,16 @@ textarea::placeholder {
 
   .quote-source {
     font-size: 14px;
+  }
+  .messages-container {
+    width: 95%;
+    max-width: 1000px;
+    height: 50vh;
+    gap: 20px;
+    padding: 12px;
+  }
+  .containers h1 {
+    margin-bottom: 20px;
   }
   
 }
@@ -1063,4 +1051,23 @@ textarea::placeholder {
   #icon {
     right: 5px; 
   }
+  .messages-container {
+    width: 90%;
+    max-width: 1000px;
+    height: 50vh;
+    gap: 20px;
+    padding: 12px;
+  }
+  .message-card h3 {
+    font-size: 16px;
+  }
+  
+  .message-card p {
+    font-size: 14px;
+  }
+  
+  .message-card span {
+    font-size: 12px;
+  }
+  
 }
