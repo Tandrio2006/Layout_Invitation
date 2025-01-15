@@ -83,5 +83,25 @@ function copyToClipboard(elementId) {
     textArea.select();
     document.execCommand("copy");
     document.body.removeChild(textArea);
-    alert("Nomor rekening telah disalin!");
+
+    // Membuat pop-up kecil
+    var alertBox = document.createElement("div");
+    alertBox.innerText = "Nomor rekening telah disalin!";
+    alertBox.style.position = "fixed";
+    alertBox.style.top = "80%";  // Mengatur posisi sedikit lebih bawah dari tengah
+    alertBox.style.left = "50%";
+    alertBox.style.transform = "translateX(-50%)"; // Hanya horizontal center
+    alertBox.style.padding = "10px";
+    alertBox.style.backgroundColor = "#4CAF50";
+    alertBox.style.color = "white";
+    alertBox.style.borderRadius = "20px";
+    alertBox.style.zIndex = "9999";
+
+    // Menampilkan pop-up dan menghapusnya setelah 2 detik
+    document.body.appendChild(alertBox);
+    setTimeout(function() {
+        document.body.removeChild(alertBox);
+    }, 2000);
 }
+
+
