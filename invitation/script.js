@@ -105,3 +105,45 @@ function copyToClipboard(elementId) {
 }
 
 
+const thumbnails = document.querySelectorAll('.thumbnails img');
+    const mainImages = document.querySelectorAll('.main-image img');
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('click', () => {
+        // Hapus kelas aktif dari semua thumbnail dan gambar utama
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        mainImages.forEach(img => img.classList.remove('active'));
+
+        // Tambahkan kelas aktif ke thumbnail dan gambar yang dipilih
+        thumbnail.classList.add('active');
+        mainImages[index].classList.add('active');
+      });
+    });
+
+    // Logika drag untuk thumbnail slider
+    const thumbnailContainer = document.querySelector('.thumbnails');
+    let isDown = false;
+    let startX, scrollLeft;
+
+    thumbnailContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      thumbnailContainer.classList.add('active');
+      startX = e.pageX - thumbnailContainer.offsetLeft;
+      scrollLeft = thumbnailContainer.scrollLeft;
+    });
+
+    thumbnailContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    thumbnailContainer.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    thumbnailContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - thumbnailContainer.offsetLeft;
+      const walk = (x - startX) * 2; // Kecepatan scroll (modifikasi sesuai kebutuhan)
+      thumbnailContainer.scrollLeft = scrollLeft - walk;
+    });
