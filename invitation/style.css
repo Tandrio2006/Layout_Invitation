@@ -413,7 +413,16 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none; 
 }
-
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s, filter 0.3s;
+  border-radius: 5px;
+  filter: grayscale(100%);
+}
 .thumbnails::-webkit-scrollbar {
   display: none;
 }
@@ -428,9 +437,13 @@ body {
   border-radius: 5px;
 }
 
-.thumbnails img:hover,
 .thumbnails img.active {
-  border: 2px solid #007bff;
+  filter: grayscale(0%); /* Kembali berwarna */
+  border: 2px solid #bf9b73; /* Border biru */
+}
+
+.thumbnails img:hover {
+  filter: grayscale(0%); /* Kembali berwarna saat hover */
 }
 /* .gallery-box {
   max-width: 97%; 
@@ -620,17 +633,18 @@ section.message.section {
 .messages-container {
   width: 100%;
   max-width: 1050px;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: #bf9b73;
-  padding: 40px;
+  gap: 10px;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto; 
-  scrollbar-width: thin; 
-  scrollbar-color: #d4a373 #f8f8f8;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+.messages-container::-webkit-scrollbar {
+  display: none; 
 }
 
 .message-card {
@@ -638,15 +652,8 @@ section.message.section {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
-
-.message-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
 .message-card h3 {
   margin: 0 0 10px;
   font-size: 18px;
@@ -1001,7 +1008,7 @@ section.message.section {
     font-size: 14px;
   }
   .messages-container {
-    width: 95%;
+    width: 100%;
     max-width: 1000px;
     height: 50vh;
     gap: 20px;
@@ -1106,7 +1113,7 @@ section.message.section {
     right: 5px; 
   }
   .messages-container {
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     height: 50vh;
     gap: 20px;

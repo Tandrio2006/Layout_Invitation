@@ -106,44 +106,69 @@ function copyToClipboard(elementId) {
 
 
 const thumbnails = document.querySelectorAll('.thumbnails img');
-    const mainImages = document.querySelectorAll('.main-image img');
+const mainImages = document.querySelectorAll('.main-image img');
+let currentIndex = 0;
+let autoSlideInterval;
 
-    thumbnails.forEach((thumbnail, index) => {
-      thumbnail.addEventListener('click', () => {
-        // Hapus kelas aktif dari semua thumbnail dan gambar utama
-        thumbnails.forEach(thumb => thumb.classList.remove('active'));
-        mainImages.forEach(img => img.classList.remove('active'));
+// Fungsi untuk mengatur gambar aktif
+function setActiveImage(index) {
+  // Hapus kelas aktif dari semua thumbnail dan gambar utama
+  thumbnails.forEach((thumb) => thumb.classList.remove('active'));
+  mainImages.forEach((img) => img.classList.remove('active'));
 
-        // Tambahkan kelas aktif ke thumbnail dan gambar yang dipilih
-        thumbnail.classList.add('active');
-        mainImages[index].classList.add('active');
-      });
-    });
+  // Tambahkan kelas aktif ke thumbnail dan gambar yang dipilih
+  thumbnails[index].classList.add('active');
+  mainImages[index].classList.add('active');
+}
 
-    // Logika drag untuk thumbnail slider
-    const thumbnailContainer = document.querySelector('.thumbnails');
-    let isDown = false;
-    let startX, scrollLeft;
+// Fungsi untuk auto-slide
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % mainImages.length; // Perpindahan ke gambar berikutnya
+    setActiveImage(currentIndex);
+  }, 3000); // Interval waktu (3 detik)
+}
 
-    thumbnailContainer.addEventListener('mousedown', (e) => {
-      isDown = true;
-      thumbnailContainer.classList.add('active');
-      startX = e.pageX - thumbnailContainer.offsetLeft;
-      scrollLeft = thumbnailContainer.scrollLeft;
-    });
+// Inisialisasi awal saat halaman dimuat
+setActiveImage(currentIndex); // Set thumbnail pertama dan gambar utama sebagai aktif
 
-    thumbnailContainer.addEventListener('mouseleave', () => {
-      isDown = false;
-    });
+// Hentikan auto-slide ketika thumbnail di-klik
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    clearInterval(autoSlideInterval); // Hentikan auto-slide
+    currentIndex = index; // Set index ke gambar yang di-klik
+    setActiveImage(currentIndex); // Tampilkan gambar yang dipilih
+    startAutoSlide(); // Mulai ulang auto-slide
+  });
+});
 
-    thumbnailContainer.addEventListener('mouseup', () => {
-      isDown = false;
-    });
+// Mulai auto-slide saat halaman dimuat
+startAutoSlide();
 
-    thumbnailContainer.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - thumbnailContainer.offsetLeft;
-      const walk = (x - startX) * 2; // Kecepatan scroll (modifikasi sesuai kebutuhan)
-      thumbnailContainer.scrollLeft = scrollLeft - walk;
-    });
+// Logika drag untuk thumbnail slider
+const thumbnailContainer = document.querySelector('.thumbnails');
+let isDown = false;
+let startX, scrollLeft;
+
+thumbnailContainer.addEventListener('mousedown', (e) => {
+  isDown = true;
+  thumbnailContainer.classList.add('active');
+  startX = e.pageX - thumbnailContainer.offsetLeft;
+  scrollLeft = thumbnailContainer.scrollLeft;
+});
+
+thumbnailContainer.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+thumbnailContainer.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+thumbnailContainer.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - thumbnailContainer.offsetLeft;
+  const walk = (x - startX) * 2; // Kecepatan scroll (modifikasi sesuai kebutuhan)
+  thumbnailContainer.scrollLeft = scrollLeft - walk;
+});
