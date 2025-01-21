@@ -94,7 +94,7 @@ function copyToClipboard(elementId) {
     alertBox.style.padding = "10px";
     alertBox.style.backgroundColor = "#4CAF50";
     alertBox.style.color = "white";
-    alertBox.style.borderRadius = "20px";
+    alertBox.style.borderRadius = "10px";
     alertBox.style.zIndex = "9999";
 
     // Menampilkan pop-up dan menghapusnya setelah 2 detik

@@ -196,27 +196,6 @@
                 <i>"Aku tidak tahu dimana ujung perjalanan ini, aku tidak bisa menjanjikan apapun. Tapi,
                     selama aku mampu, mimpi-mimpi kita adalah prioritas."</i>
             </p>
-            <!-- <div class="gallery-box" data-aos="fade-up" data-aos-duration="1600">
-                <div class="gallery">
-                    <div class="gallery-item"><img src="image/image1.jpg" alt="Moment 1"></div>
-                    <div class="gallery-item"><img src="image/image2.jpg" alt="Moment 2"></div>
-                    <div class="gallery-item"><img src="image/image3.jpg" alt="Moment 3"></div>
-                    <div class="gallery-item"><img src="image/image4.jpg" alt="Moment 4"></div>
-                    <div class="gallery-item"><img src="image/image5.jpg" alt="Moment 5"></div>
-                    <div class="gallery-item"><img src="image/image6.jpg" alt="Moment 6"></div>
-                    <div class="gallery-item"><img src="image/image7.jpg" alt="Moment 7"></div>
-                    <div class="gallery-item"><img src="image/image8.jpg" alt="Moment 8"></div>
-                    <div class="gallery-item"><img src="image/image9.jpg" alt="Moment 1"></div>
-                    <div class="gallery-item"><img src="image/image10.jpg" alt="Moment 2"></div>
-                    <div class="gallery-item"><img src="image/image11.jpg" alt="Moment 3"></div>
-                    <div class="gallery-item"><img src="image/image12.jpg" alt="Moment 4"></div>
-                    <div class="gallery-item"><img src="image/image13.jpg" alt="Moment 5"></div>
-                    <div class="gallery-item"><img src="image/image14.jpg" alt="Moment 6"></div>
-                    <div class="gallery-item"><img src="image/image15.jpg" alt="Moment 7"></div>
-                    <div class="gallery-item"><img src="image/image16.jpg" alt="Moment 8"></div>
-                </div>
-            </div> -->
-
             <!-- Box khusus untuk galeri -->
             <div class="gallery-container" data-aos="fade-up" data-aos-duration="1100">
                 <!-- Main Image -->
@@ -256,23 +235,22 @@
                 <h2 data-aos="zoom-in" data-aos-duration="1200">Love Gift</h2>
                 <p data-aos="fade-up" data-aos-duration="1400"><i>Dengan hormat, bagi Anda yang ingin memberikan tanda
                         kasih kepada kami, dapat melalui:</i></p>
-                <div class="bank-card" data-aos="fade-up" data-aos-duration="1600">
-                    <div class="bank-info">
-                        <img src="image/BCA.png" alt="BCA">
-                        <p id="bca-number">123-456-7890</p>
-                        <p>Nama Wahyu Siapa</p>
+                <div class="container-bank">
+                    <!-- BCA Card -->
+                    <div class="card-bank" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="image/BCA.png" alt="BCA Logo">
+                        <p>No. Rekening: <strong id="bca-number">2820297663</strong></p>
+                        <p>a.n Muhammad Fahmi</p>
+                        <button onclick="copyToClipboard('bca-number')">Salin No. Rekening</button>
                     </div>
-                    <button class="copy-button" onclick="copyToClipboard('bca-number')" data-aos="zoom-in"
-                        data-aos-duration="1800"><i class="fa-solid fa-copy" style="color: #bf9b73; margin:5px;"></i> Salin</button>
-                </div>
-                <div class="bank-card" data-aos="fade-up" data-aos-duration="2000">
-                    <div class="bank-info">
-                        <img src="image/BNI.png" alt="BNI">
-                        <p id="bni-number">987-654-3210</p>
-                        <p>Nama Riski Siapa</p>
+
+                    <!-- DANA Card -->
+                    <div class="card-bank" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="image/BNI.png" alt="BNI Logo" style="margin-top: 5px;">
+                        <p>No. Rekening: <strong id="bni-number">28202973424</strong></p>
+                        <p>a.n Muhammad Fahmi</p>
+                        <button onclick="copyToClipboard('bni-number')">Salin No. Rekening</button>
                     </div>
-                    <button class="copy-button" onclick="copyToClipboard('bni-number')" data-aos="zoom-in"
-                        data-aos-duration="2200"><i class="fa-solid fa-copy" style="color: #bf9b73; margin:5px;"></i> Salin</button>
                 </div>
             </section>
 
@@ -288,7 +266,7 @@
                     <div class="form-group" data-aos="fade-up" data-aos-duration="1800">
                         <label for="presensi">Presensi</label>
                         <select id="presensi" name="presensi">
-                            <option value="">Konfirmasi Presensi</option>
+                            <option value="" selected disabled>Pilih Presensi</option>
                             <option value="hadir">Hadir</option>
                             <option value="tidak_hadir">Tidak Hadir</option>
                         </select>
@@ -301,7 +279,8 @@
                         <label for="doa">Ucapan & Doa</label>
                         <textarea id="doa" name="doa" placeholder="Tulis Ucapan dan Doa"></textarea>
                     </div>
-                    <button type="submit" class="send-button" data-aos="zoom-in" data-aos-duration="2400"><i class="fa-regular fa-paper-plane" style="margin:5px;"></i>
+                    <button type="submit" class="send-button" data-aos="zoom-in" data-aos-duration="2400"><i
+                            class="fa-regular fa-paper-plane" style="margin:5px;"></i>
                         Send</button>
                     <hr style="color: #ffffff;">
                     <div class="messages-container" data-aos="zoom-in" data-aos-duration="1000">
@@ -339,41 +318,6 @@
                 </form>
             </section>
         </div>
-        <!-- <section class="message section" data-aos="fade-up" data-aos-duration="1000">
-            <div class="messages-container" data-aos="fade-up" data-aos-duration="1200">
-                <div class="message-card">
-                    <h3>Tandrio</h3>
-                    <p>dwdawdwa</p>
-                    <span>08/01/2025 16:56:39</span>
-                </div>
-                <div class="message-card">
-                    <h3>Magician Smanda</h3>
-                    <p>Happy Wedding buat bang Fahmi dan kakak Fahira.</p>
-                    <span>10/10/2024 14:08:00</span>
-                </div>
-                <div class="message-card">
-                    <h3>Bidan Witri</h3>
-                    <p>Selamat menempuh hidup baru, semoga jadi keluarga sakinah, mawaddah, warohmah.</p>
-                    <span>05/10/2024 22:16:46</span>
-                </div>
-                <div class="message-card">
-                    <h3>Tandrio</h3>
-                    <p>dwdawdwa</p>
-                    <span>08/01/2025 16:56:39</span>
-                </div>
-                <div class="message-card">
-                    <h3>Magician Smanda</h3>
-                    <p>Happy Wedding buat bang Fahmi dan kakak Fahira.</p>
-                    <span>10/10/2024 14:08:00</span>
-                </div>
-                <div class="message-card">
-                    <h3>Bidan Witri</h3>
-                    <p>Selamat menempuh hidup baru, semoga jadi keluarga sakinah, mawaddah, warohmah.</p>
-                    <span>05/10/2024 22:16:46</span>
-                </div>
-            </div>
-        </section> -->
-
         <div class="thank-you" data-aos="fade-down" data-aos-duration="1000">
             TERIMA KASIH<br>
             ATAS KEHADIRAN DAN DOA RESTUNYA<br>
