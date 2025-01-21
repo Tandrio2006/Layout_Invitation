@@ -996,7 +996,6 @@ section.message.section {
     width: 100%;
   }
 }
-  /* mobile phone */
 @media (max-width:576px) {
   html {
     font-size: 60%;
