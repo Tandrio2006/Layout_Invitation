@@ -344,6 +344,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  text-decoration: none;
 }
 
 .location-btn i {
@@ -628,6 +629,7 @@ section.message.section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
+  position: relative;
 }
 .message-card h3 {
   margin: 0 0 10px;
@@ -647,7 +649,37 @@ section.message.section {
   color: #888;
   text-align: right;
 }
+.attendance-status {
+  position: absolute; /* Menempatkan status secara absolut */
+  top: 10px; /* Menempatkan status di atas */
+  right: 10px; /* Menempatkan status di kanan */
+  font-size: 14px; /* Membuat status sedikit lebih kecil */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.attendance-status i {
+  margin-right: 5px;
+  font-size: 18px; /* Ukuran ikon lebih kecil */
+}
+
+.present {
+  color: #28a745; /* Green */
+}
+
+.present i {
+  color: #28a745;
+}
+
+.absent {
+  color: #dc3545; /* Red */
+}
+
+.absent i {
+  color: #dc3545;
+}
 .footer .copyright {
   font-size: 1rem;
   margin-bottom: 20px;
@@ -995,6 +1027,16 @@ section.message.section {
   .card-bank {
     width: 100%;
   }
+
+  .attendance-status {
+    top: 8px;
+    right: 15px;
+    font-size: 12px;
+  }
+
+  .attendance-status i {
+    font-size: 16px;
+  }
 }
 @media (max-width:576px) {
   html {
@@ -1105,6 +1147,15 @@ section.message.section {
   
   .message-card span {
     font-size: 12px;
+  }
+  .attendance-status {
+    top: 5px;
+    right: 10px;
+    font-size: 10px;
+  }
+
+  .attendance-status i {
+    font-size: 14px;
   }
   
 }

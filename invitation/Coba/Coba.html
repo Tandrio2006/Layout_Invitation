@@ -1,92 +1,34 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coba Page</title>
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 <body>
-
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-  <h1 data-aos="fade-up">dwaaaaaaaaaasadawd</h1>
-
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- <script>
-      AOS.init();
- </script>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Person.</strong>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Numquam labore omnis minus maiores laboriosam, facere in beatae esse. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pasangan Mempelai</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <section class="couple-section">
-    <h2><span>Pasangan</span> Mempelai</h2>
-    <p class="description">
-      Dengan segala puji bagi Allah yang telah menciptakan makhluk-Nya berpasang-pasangan,
-      Ya Allah izinkanlah kami merangkai cinta yang Engkau berikan dalam ikatan pernikahan
-    </p>
-
-    <div class="couple-container">
-      <div class="person">
-        <img src="image/photo.jpeg" alt="Ramdan Aditia">
-        <h3>Ramdan Aditia</h3>
-        <p>Putra dari pasangan</p>
-        <p>Bapak Sodikin</p>
-        <p>& Ibu Oneng</p>
-        <p class="social">@ramdanaditia_</p>
-      </div>
-
-      <div class="separator">
-        <span>dengan</span>
-      </div>
-
-      <div class="person">
-        <img src="image/photo.jpeg" alt="Yuliyana Sari">
-        <h3>Yuliyana Sari</h3>
-        <p>Putri dari pasangan</p>
-        <p>Bapak Tatang</p>
-        <p>& Ibu Lilis Atikah</p>
-        <p class="social">@yuliynsr</p>
-      </div>
-    </div>
-  </section>
-</body>
-</html>-->
