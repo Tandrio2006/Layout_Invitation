@@ -7,264 +7,76 @@
   <title>Wedding Invitation</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="countdown/simplyCountdown.min.js"></script>
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Playfair Display", serif;
-      background-color: black;
-      /* Mengubah latar belakang menjadi hitam */
-      color: white;
-      /* Mengubah teks menjadi putih */
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Great Vibes", cursive;
-      color: #f5d547;
-      /* Warna emas untuk header */
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    h3 {
-      font-size: 1.75rem;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .fade-in {
-      animation: fadeIn 1s ease-out;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Menyesuaikan navbar */
-    #navbar {
-      background-color: rgba(0,
-          0,
-          0,
-          0.7);
-      /* Navbar menjadi sedikit transparan */
-    }
-
-    .bg-gray-500 {
-      background-color: #333333;
-    }
-
-    .bg-transparent {
-      background-color: transparent;
-      /* Navbar transparent */
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    /* Perubahan pada tombol */
-    .hover\:shadow-lg:hover {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      /* Gaya hover shadow */
-    }
-
-    /* Style untuk footer */
-    footer {
-      background-color: #222222;
-      /* Ubah latar belakang footer menjadi gelap */
-    }
-
-    .menu-item.active {
-      color: #b7b7b7;
-      /* Teks lebih terang */
-      font-weight: bold;
-    }
-
-    .menu-item.active::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      /* Jarak garis bawah */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50%;
-      /* Panjang garis */
-      height: 4px;
-      /* Ketebalan garis */
-      background-color: #facc15;
-      /* Warna kuning */
-      border-radius: 9999px;
-      /* Membulatkan ujung garis */
-      transition: all 0.3s ease;
-      /* Animasi mulus */
-    }
-
-    .simply-countdown {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      font-family: 'Work Sans', sans-serif;
-      margin-top: 40px;
-    }
-
-    .simply-countdown .simply-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border-radius: 10px;
-      padding: 20px;
-      width: 130px;
-      height: 110px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .simply-countdown .simply-section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    }
-
-    .simply-countdown .simply-section .simply-amount {
-      font-size: 2.4rem;
-      font-weight: bold;
-    }
-
-    .simply-countdown .simply-section .simply-word {
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    #icon {
-      cursor: pointer;
-      width: 50px;
-      position: fixed;
-      bottom: 27px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .right-col {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
 </head>
 
 <body class="overflow-x-hidden">
-  <div id="page-intro" class="w-full h-screen flex justify-center items-center bg-gradient-to-b">
-    <div class="rounded-lg shadow-xl p-8 w-4/5 max-w-md">
-      <!-- Informasi Mempelai -->
-      <div class="mb-6 text-center">
-        <h2 class="text-3xl font-extrabold mb-4">Undangan Pernikahan</h2>
-        <div id="mempelai-tampilan" class="mb-4">
-          <h1 class="text-xl font-semibold">Ilham Nur</h1>
-          <p class="font-medium my-2">dan</p>
-          <h1 class="text-xl font-semibold">NurHikmah</h1>
-        </div>
-        <p class="text-lg">
-          Turut mengundang:
-          <span class="font-semibold">Panji dan Ny.</span>
-        </p>
-      </div>
-
-      <!-- Tombol Buka Undangan -->
-      <div class="flex justify-center mt-6">
-        <button id="open-invitation"
-          class="px-6 py-3 rounded-lg text-lg font-semibold flex items-center space-x-2 text-white hover:shadow-lg transition-transform transform hover:scale-105"
-          style="background-color: #d24e1e">
-          <i class="fas fa-envelope"></i>
-          <span>
-            <h2>Buka Undangan</h2>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div id="invitation-content" class="hidden">
+  <div id="invitation-content">
     <!-- Navbar -->
-    <nav id="navbar"
-      class="bg-transparent text-white py-4 w-full z-10 left-0 shadow-md hidden md:flex md:fixed md:top-0">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center">
-          <!-- Logo / Brand -->
-          <div class="text-2xl font-bold">Pernikahan Kami</div>
-          <!-- Navbar Links for larger screens -->
-          <div class="space-x-6">
-            <a href="#home" class="hover:text-yellow-400">Home</a>
-            <a href="#info" class="hover:text-yellow-400">Info</a>
-            <a href="#gallery" class="hover:text-yellow-400">Gallery</a>
-            <a href="#rsvp" class="hover:text-yellow-400">RSVP</a>
-            <a href="#gift" class="hover:text-yellow-400">Gift</a>
+    <nav id="navbar">
+      <div class="navbar">
+        <div class="brand">ANKITA & ANIL</div>
+        <div class="menu-container">
+          <div class="menu">MENU</div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
+        </div>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleMenu()"><img src="gallery/close.svg" alt="" width="40px"></div>
+        <div class="menu-sidebar">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <div class="garis"></div>
+            <li><a href="#">LIVE STREAM</a></li>
+            <div class="garis"></div>
+            <li><a href="#">THE COUPLE</a></li>
+            <div class="garis"></div>
+            <li><a href="#">SCHEDULE</a></li>
+            <div class="garis"></div>
+            <li><a href="#">ENCOMIUM</a></li>
+            <div class="garis"></div>
+            <li><a href="#">PHOTOS</a></li>
+            <div class="garis"></div>
+            <li><a href="#">TRAVEL & ACCOMMODATION</a></li>
+            <div class="garis"></div>
+            <li><a href="#">PARKING & TRANSPORTATION</a></li>
+            <div class="garis"></div>
+            <li><a href="#">CONFIRM ATTENDANCE / RSVP</a></li>
+            <div class="garis"></div>
+            <li><a href="#">FAQS</a></li>
+            <div class="garis"></div>
+          </ul>
         </div>
       </div>
     </nav>
+    <header class="hero">
+      <div class="hero-content">
+          <div class="line-married"></div>
+          <h1>WE'RE GETTING MARRIED!</h1>
+          <div class="line-married" style="margin-bottom: 30px;"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative w-full h-screen">
-      <!-- Photo Slider -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="slider relative w-full h-full">
-          <!-- Slide 1 -->
-          <div
-            class="slide w-full h-full absolute bg-cover bg-center flex justify-center items-center text-center text-white"
-            style="background-image: url('image1.jpg')">
-            <div class="bg-black bg-opacity-50 p-4 rounded">
-              <h1 class="text-4xl font-bold mb-2">Selamat Datang</h1>
-              <p class="text-lg">
-                Mari rayakan momen bahagia ini bersama kami
-              </p>
-            </div>
+          <div class="line-date"></div>
+          <p class="date">May 5 & 6, 2022</p>
+          <div class="line-date"></div>
+          <p>AT NESARA CENTRE FOR CULTURE</p>
+          <p>PARKING AVAILABLE ON PREMISES.</p>
+          <p>SCROLL DOWN FOR MORE DETAILS.</p>
+          <div class="buttons">
+              <a href="#" class="btn btn-primary">LINK TO GOOGLE MAPS</a>
+              <a href="#" class="btn btn-secondary">LIVE STREAM LINK</a>
           </div>
-          <!-- Slide 2 -->
-          <div
-            class="slide w-full h-full absolute bg-cover bg-center flex justify-center items-center text-center text-white"
-            style="background-image: url('image2.jpg')">
-            <div class="bg-black bg-opacity-50 p-4 rounded">
-              <h1 class="text-4xl font-bold mb-2">Hari Spesial Kami</h1>
-              <p class="text-lg">
-                Kehadiran Anda adalah kebahagiaan bagi kami
-              </p>
-            </div>
+          <p class="celebrate">CELEBRATE WITH US!</p>
+          <div class="scroll-indicator">
+              <span>↓</span>
           </div>
-          <!-- Slide 3 -->
-          <div
-            class="slide w-full h-full absolute bg-cover bg-center flex justify-center items-center text-center text-white"
-            style="background-image: url('image3.jpg')">
-            <div class="bg-black bg-opacity-50 p-4 rounded">
-              <h1 class="text-4xl font-bold mb-2">Ayo Bergabung</h1>
-              <p class="text-lg">Rasakan momen penuh cinta dan kebersamaan</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-
+  </header>
     <!-- Info Section -->
     <section id="info" class="py-10">
       <div class="container mx-auto px-4 rounded py-4">
@@ -276,7 +88,7 @@
           <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
             <!-- Bride -->
             <div class="text-center">
-              <img src="woman1.jpg" alt="Mempelai Wanita"
+              <img src="gallery/woman1.jpg" alt="Mempelai Wanita"
                 class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-yellow-400 shadow-md object-cover mx-auto" />
               <h3 class="text-xl font-semibold mt-4">NurHikmah</h3>
               <p class="text-white">
@@ -286,7 +98,7 @@
 
             <!-- Groom -->
             <div class="text-center">
-              <img src="man1.jpg" alt="Mempelai Pria"
+              <img src="gallery/man1.jpg" alt="Mempelai Pria"
                 class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-yellow-400 shadow-md object-cover mx-auto" />
               <h3 class="text-xl font-semibold mt-4">Ilham Nur</h3>
               <p class="text-white">Putra ke-7 dari [Nama Orang Tua Pria]</p>
@@ -307,23 +119,41 @@
             <div class="simply-countdown"></div>
           </div>
 
-          <!-- Location -->
-          <div class="p-6 rounded-lg shadow-md text-center" style="background-color: #d24e1e">
-            <h3 class="text-xl font-semibold mb-4">Lokasi</h3>
-            <p class="">Gedung ball room sefood GP</p>
-            <p class="mb-10">
-              Golden View, Tj. Buntung, Kec. Bengkong, Kota Batam, Kepulauan
-              Riau
-            </p>
-
-
-            <!-- Tambahkan iframe peta di sini -->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16338948.17848063!2d93.49078969999995!3d1.1597364000000203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9898452fd3df1%3A0xe05581d15654e2e8!2sGedung%20ball%20room%20sefood%20GP!5e0!3m2!1sid!2sid!4v1735894384870!5m2!1sid!2sid"
-              width="100%" height="300" style="border-radius: 3px" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
         </div>
+        <section class="event-section">
+          <div class="container">
+            <h3 class="subtitle">Our Engagement & Wedding</h3>
+            <h1 class="title">When & Where</h1>
+            <div class="events">
+              <!-- Engagement -->
+              <div class="event">
+                <div class="image-container">
+                  <img src="gallery/Engagement.jpeg" alt="The Engagement">
+                </div>
+                <div class="event-details">
+                  <h2 class="event-title">The Engagement</h2>
+                  <p class="event-date">Saturday, 28 Dec. 2024</p>
+                  <p class="event-time">11:00 AM</p>
+                  <p class="event-location">St. Joseph’s Forane Church,<br> Vayattuparamba</p>
+                  <a href="#" class="event-link">See Location</a>
+                </div>
+              </div>
+              <!-- Wedding -->
+              <div class="event">
+                <div class="image-container">
+                  <img src="gallery/Wedding.jpeg" alt="The Wedding">
+                </div>
+                <div class="event-details">
+                  <h2 class="event-title">The Wedding</h2>
+                  <p class="event-date">Thursday, 02 Jan. 2025</p>
+                  <p class="event-time">10:30 AM</p>
+                  <p class="event-location">St. George Church,<br> Chempanthotty, Kannur</p>
+                  <a href="#" class="event-link">See Location</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Additional Notes -->
         <!-- <div
@@ -454,130 +284,20 @@
 
     <div class="content">
       <div class="right-col">
-        <img src="play.png" id="icon">
+        <img src="gallery/play.png" id="icon">
       </div>
       <audio id="mySong">
-        <source src="media/song1.mp3" type="audio/mp3">
+        <source src="media/song.mp3" type="audio/mp3">
       </audio>
     </div>
 
-    <!-- Footer Navigation -->
-
-    <footer class="fixed bottom-0 w-full border-t shadow-lg md:hidden pt-1">
-      <div class="flex justify-between items-center px-6 py-2 text-gray-500 relative">
-        <a href="#home" class="menu-item flex flex-col items-center active">
-          <i class="fas fa-home text-xl"></i>
-          <span class="text-xs">Home</span>
-        </a>
-        <a href="#info" class="menu-item flex flex-col items-center">
-          <i class="fas fa-info-circle text-xl"></i>
-          <span class="text-xs">Info</span>
-        </a>
-        <a href="#gallery" class="menu-item flex flex-col items-center">
-          <i class="fas fa-images text-xl"></i>
-          <span class="text-xs">Gallery</span>
-        </a>
-        <a href="#rsvp" class="menu-item flex flex-col items-center">
-          <i class="fas fa-envelope text-xl"></i>
-          <span class="text-xs">RSVP</span>
-        </a>
-        <a href="#gift" class="menu-item flex flex-col items-center">
-          <i class="fas fa-gift text-xl"></i>
-          <span class="text-xs">Gift</span>
-        </a>
-        <!-- Active Indicator -->
-        <div id="active-indicator"
-          class="absolute bottom-0 left-0 w-1/5 h-1 bg-yellow-500 transition-all duration-300 rounded-full"></div>
-      </div>
-    </footer>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Slide show functionality
-      const slides = document.querySelectorAll(".slide");
-      let currentSlide = 0;
-
-      function changeSlide() {
-        slides.forEach((slide, index) => {
-          slide.classList.add("hidden");
-          if (index === currentSlide) {
-            slide.classList.remove("hidden");
-          }
-        });
-        currentSlide = (currentSlide + 1) % slides.length;
-      }
-
-      setInterval(changeSlide, 2500);
-      changeSlide();
-
-      // Navbar background change on scroll
-      const navbar = document.getElementById("navbar");
-      const homeSection = document.getElementById("home");
-
-      window.addEventListener("scroll", () => {
-        const homeBottom = homeSection.getBoundingClientRect().bottom;
-        if (homeBottom <= 0) {
-          navbar.classList.remove("bg-transparent");
-          navbar.classList.add("bg-gray-500");
-        } else {
-          navbar.classList.remove("bg-gray-500");
-          navbar.classList.add("bg-transparent");
-        }
-      });
-
-      // Show invitation content
-      document
-        .getElementById("open-invitation")
-        .addEventListener("click", function () {
-          const invitationContent =
-            document.getElementById("invitation-content");
-          invitationContent.classList.remove("hidden");
-          invitationContent.classList.add("fade-in");
-
-          const pageIntro = document.getElementById("page-intro");
-          pageIntro.classList.add("hidden");
-        });
-
-      // Menu indicator functionality
-      const menuItems = document.querySelectorAll(".menu-item");
-      const indicator = document.getElementById("active-indicator");
-
-      function setIndicatorToActive(item) {
-        const itemRect = item.getBoundingClientRect();
-        indicator.style.left = `${itemRect.left}px`;
-        indicator.style.width = `${itemRect.width}px`;
-      }
-
-      // Set default indicator position to the active menu item
-      const defaultActive = document.querySelector(".menu-item.active");
-      if (defaultActive) {
-        setIndicatorToActive(defaultActive);
-      }
-
-      // Update active menu item and indicator on scroll
-      function updateActiveMenu() {
-        let currentSection = "";
-
-        document.querySelectorAll("section").forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          if (window.scrollY >= sectionTop - sectionHeight / 3) {
-            currentSection = section.getAttribute("id");
-          }
-        });
-
-        menuItems.forEach((item) => {
-          item.classList.remove("active");
-          if (item.getAttribute("href").includes(currentSection)) {
-            item.classList.add("active");
-            setIndicatorToActive(item);
-          }
-        });
-      }
-
-      window.addEventListener("scroll", updateActiveMenu);
-    });
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
     simplyCountdown('.simply-countdown', {
       year: 2025,
       month: 1,
@@ -592,50 +312,49 @@
         seconds: { singular: 'detik', plural: 'detik' }
       }
     });
-    $("#lihatUndanganBtn").on("click", function () {
-      $("#hero").hide();
-
-      $("#undanganSection").show();
-      $("#menu").show();
-
-      $('html, body').animate({
-        scrollTop: $("#undanganSection").offset().top
-      }, 500);
-    });
-
     var mySong = document.getElementById("mySong");
     var icon = document.getElementById("icon");
     var songSource = document.getElementById("songSource");
+    var bukaUndangan = document.getElementById("bukaUndangan");
 
     var songs = ["media/song.mp3", "media/song2.mp3", "media/song3.mp3"];
     var currentSongIndex = 0;
     var isSongPlayedOnce = false;
 
+    // Fungsi untuk memulai pemutaran lagu
+    function startPlaying() {
       if (!isSongPlayedOnce) {
         mySong.play().catch(function (error) {
           console.log("Autoplay is blocked. User interaction needed.");
         });
-        icon.src = "image/pause.png";
+        icon.src = "gallery/pause.png";
         isSongPlayedOnce = true;
       }
+    }
 
+    // Event listener untuk tombol "Buka Undangan"
+    bukaUndangan.addEventListener("click", function () {
+      startPlaying();
+    });
+
+    // Event listener untuk ikon kontrol pemutaran
     icon.onclick = function () {
       if (mySong.paused) {
         mySong.play();
-        icon.src = "pause.png";
+        icon.src = "gallery/pause.png";
       } else {
         mySong.pause();
-        icon.src = "play.png";
+        icon.src = "gallery/play.png";
       }
     };
 
+    // Pemutaran otomatis lagu berikutnya ketika lagu berakhir
     mySong.addEventListener("ended", function () {
       currentSongIndex = (currentSongIndex + 1) % songs.length;
       songSource.src = songs[currentSongIndex];
       mySong.load();
       mySong.play();
     });
-
   </script>
 </body>
 
