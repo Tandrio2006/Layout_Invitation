@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="countdown/simplyCountdown.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+  <div id="invitation-content">
+    <section id="menu">
+      <div class="menu-container">
+        <div class="menu-options">
+          <button onclick="scrollToSection('hero', this)" class="menu-button" title="Home">
+            <i class="fa-regular fa-clock"></i>
+          </button>
+          <button onclick="scrollToSection('married', this)" class="menu-button" title="Profile">
+            <i class="fa-solid fa-person-half-dress"></i>
+          </button>
+          <button onclick="scrollToSection('calender', this)" class="menu-button center-button" title="Calendar">
+            <i class="fa-regular fa-calendar fa-lg"></i>
+          </button>
+          <button onclick="scrollToSection('gallery', this)" class="menu-button" title="Gallery">
+            <i class="fa-regular fa-images"></i>
+          </button>
+          <button onclick="scrollToSection('comment', this)" class="menu-button" title="Comments">
+            <i class="fa-regular fa-comment"></i>
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="right-col">
+          <img src="gallery/play.png" id="icon">
+        </div>
+        <audio id="mySong">
+          <source src="media/song.mp3" type="audio/mp3">
+        </audio>
+      </div>
+  
+    </div>
+  
+    </section>
+    <header class="hero">
+
+
+    </header>
+    <!-- Info Section -->
+    <section id="info" class="py-10" style=" background-color: #16C47F;">
+      <div class="containers1">
+        <h2>HAPPILY MARRIED SINCE</h2>
+        <div class="countdown1">1002 DAYS | 0 HOURS | 16 MINUTES | 5 SECONDS</div>
+        <div class="icons1">
+          <div class="icon1"></div>
+          <div class="icon1"></div>
+          <div class="icon1"></div>
+          <div class="icon1"></div>
+        </div>
+        <p>Click the button below to <strong>confirm</strong> your attendance for <em>all</em> or <em>specific
+            events</em>.</p>
+        <div class="button-container1">
+          <button class="button1">CONFIRM ATTENDANCE / RSVP</button>
+        </div>
+      </div>
+    </section>
+    <div class="parallax mb-5">
+      <div class="quote-container">
+          <p class="quote">"Mereka akan menjadi suami istri yang berlimpah berkah keberuntungan Apabila keduanya memiliki: Keyakinan, kedermawanan, ketrampilan, Ucapan saling mencintai satu sama lain dan hidup sesuai dengan Dhamma."</p>
+          <p class="source">(Angutara Nikaya Bab VI.3; Sutta ke 53)</p>
+      </div>
+  </div>
+    <div class="card">
+      <div class="event-container">
+        <div class="event">
+          <h2>AKAD</h2>
+          <p>Minggu, 23 Juni 2024<br>08.00 WIB - Selesai</p>
+          <iframe src="https://maps.google.com/maps?q=NoLimit%20Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+          <p><strong>NoLimit Indonesia</strong><br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi, Kota
+            Bandung, Jawa Barat 40163</p>
+          <a href="#" class="btn"> <i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi</a>
+        </div>
+        <div class="event">
+          <h2>RESEPSI</h2>
+          <p>Minggu, 23 Juni 2024<br>10.00 WIB - Selesai</p>
+          <iframe src="https://maps.google.com/maps?q=NoLimit%20Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+          <p><strong>NoLimit Indonesia</strong><br>Jl. Setra Indah Utara II No. 1A, Sukagalih, Kec. Sukajadi, Kota
+            Bandung, Jawa Barat 40163</p>
+          <a href="#" class="btn"> <i class="fa-solid fa-location-arrow"></i> Petunjuk Lokasi</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-5">
+      <div class="copyright">
+          Tandrio Digital<br>
+          SmartApps Care &copy; 2025. All Rights Reserved
+      </div>
+      <div class="social-icons">
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a>
+          <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> </a>
+          <a href="#" target="_blank"><i class="fa-solid fa-phone-volume"></i> </a>
+      </div>
+  </footer>
+
+   
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+    simplyCountdown('.simply-countdown', {
+      year: 2025,
+      month: 1,
+      day: 29,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      words: {
+        days: { singular: 'hari', plural: 'hari' },
+        hours: { singular: 'jam', plural: 'jam' },
+        minutes: { singular: 'menit', plural: 'menit' },
+        seconds: { singular: 'detik', plural: 'detik' }
+      }
+    });
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+    var songSource = document.getElementById("songSource");
+    var bukaUndangan = document.getElementById("bukaUndangan");
+
+    var songs = ["media/song.mp3", "media/song2.mp3", "media/song3.mp3"];
+    var currentSongIndex = 0;
+    var isSongPlayedOnce = false;
+
+    // Fungsi untuk memulai pemutaran lagu
+    function startPlaying() {
+      if (!isSongPlayedOnce) {
+        mySong.play().catch(function (error) {
+          console.log("Autoplay is blocked. User interaction needed.");
+        });
+        icon.src = "gallery/pause.png";
+        isSongPlayedOnce = true;
+      }
+    }
+
+    bukaUndangan.addEventListener("click", function () {
+      startPlaying();
+    });
+
+    icon.onclick = function () {
+      if (mySong.paused) {
+        mySong.play();
+        icon.src = "gallery/pause.png";
+      } else {
+        mySong.pause();
+        icon.src = "gallery/play.png";
+      }
+    };
+
+    mySong.addEventListener("ended", function () {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      songSource.src = songs[currentSongIndex];
+      mySong.load();
+      mySong.play();
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/f89fc2c44e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

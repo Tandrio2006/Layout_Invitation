@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Wedding Invitation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Birthstone&family=Lexend+Deca:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="hero-page">
+            <div class="hero" style="background-color: #F5F5F5;">
+                <img src="gallery/background.png" alt="Wedding Background">
+                <div class="bubbles">
+
+                </div>
+                <div class="content">
+                    <h2>The Wedding Of</h2>
+                    <h1>Tandrio & Drio</h1>
+                    <p>Wednesday, February 5th, 2025</p>
+                    <a href="#" class="button-invitation">Open Invitation</a>
+                </div>
+
+        </div>
+    </section>
+    <section id="main-content" style="display: none;">
+        <div class="content-main">
+            <h2>Welcome to Our Wedding</h2>
+            <p>We are excited to have you with us on this special day!</p>
+        </div>
+    </section>
+</body>
+<script>
+    document.querySelector('.button-invitation').addEventListener('click', function () {
+        document.querySelector('#hero-page').style.animation = 'Fadeout 1.5s forwards';
+        setTimeout(function () {
+                document.querySelector('#hero-page').classList.add('none');
+                document.querySelector('#main-content').style.display = 'block';
+                document.querySelector('#main-content').style.animation = 'Fadein 1.5s forwards';
+            }, 1000); 
+        });
+
+    for (let i = 0; i < 15; i++) {
+        let bubble = document.createElement("div");
+        bubble.classList.add("bubble");
+        bubble.style.left = Math.random() * 100 + "vw";
+        bubble.style.animationDuration = Math.random() * 4 + 4 + "s";
+        bubble.style.animationDelay = Math.random() * 4 + "s";
+        document.querySelector(".bubbles").appendChild(bubble);
+    }
+</script>
+
+</html>
