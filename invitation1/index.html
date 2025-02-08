@@ -106,6 +106,20 @@
         border-radius: 9999px; /* Membulatkan ujung garis */
         transition: all 0.3s ease; /* Animasi mulus */
       }
+      @keyframes moveDragon {
+  0% { transform: translate(0, 0) scaleX(1); } /* Menghadap kanan */
+  25% { transform: translate(50px, 20px) scaleX(1); }
+  50% { transform: translate(100px, -30px) scaleX(1); }
+  51% { transform: translate(100px, -30px) scaleX(-1); } /* Flip ke kiri */
+  75% { transform: translate(50px, 40px) scaleX(-1); }
+  100% { transform: translate(0, 0) scaleX(-1); } /* Balik ke posisi awal */
+}
+
+.flying-dragon {
+  position: absolute;
+  animation: moveDragon 5s infinite linear;
+}
+
     </style>
   </head>
   <body class="overflow-x-hidden">
@@ -116,6 +130,7 @@
       <div class="rounded-lg shadow-xl p-8 w-4/5 max-w-md">
         <!-- Informasi Mempelai -->
         <div class="mb-6 text-center">
+          <img src="flying_dragon-243087.gif" class="flying-dragon">
           <h2 class="text-3xl font-extrabold mb-4">Undangan Pernikahan</h2>
           <div id="mempelai-tampilan" class="mb-4">
             <h1 class="text-xl font-semibold">Ilham Nur</h1>
