@@ -1,0 +1,542 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(158, 137, 15);
+    width: 90%;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    font-family: "Roboto", serif;
+    font-weight: 280;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Bonheur Royale", serif;
+}
+
+.content p {
+    font-size: 1rem;
+    font-family: "Roboto Flex", serif;
+}
+
+.button-invitation {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    color:  rgb(158, 137, 15);
+    border:solid 1px rgb(158, 137, 15);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: "Lexend Deca", serif;
+    animation: fadeInOut 1.5s infinite;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.image-fade {
+    overflow: hidden;
+}
+
+.fade-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade-img.visible {
+    opacity: 1;
+}
+.hidden {
+    display: none;
+}
+.menu-container {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-options {
+    display: flex;
+    padding: 8px 10px;
+    gap: 5px;
+    background-color: #FDFCFC;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+    background-color: #FDFCFC;
+    color: #D5AF81;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px;
+}
+
+.menu-button i {
+    transition: opacity 0.3s ease;
+}
+
+.menu-text {
+    display: none;
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.menu-button:hover {
+    background-color: #D5AF81;
+}
+
+.menu-button.active {
+    width: auto;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #D5AF81;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu-button.active i {
+    opacity: 1;
+}
+
+.menu-button.active .menu-text {
+    display: inline;
+}
+.music-button {
+    width: 45px;
+    height: 45px;
+    background-color: #B0B0B0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.music-button img {
+    width: 90%;
+    height: auto;
+}
+.music-button.active {
+    background-color: #d4b28c;
+}
+.container-front {
+    width: 100%;
+    height: 60%; 
+    display: flex;
+    position: relative;
+}
+
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 315px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gallery/flower.gif') no-repeat center center;
+    background-size: cover;
+}
+.decoration {
+    text-align: center;
+    padding: 100px 33px;
+    font-size:17px;
+    line-height: 1.8;
+    font-family: "Roboto", serif;
+    background: url('gallery/background.png') no-repeat center center;
+}
+.decoration::after {
+    content: "";
+    position: absolute;
+    top: 72%; 
+    left: 50%;
+    transform: translate(-50%, 0%); 
+    width: 100%;
+    height: 100%;
+    background: url('gallery/line.png') no-repeat center center;
+    background-size: contain; 
+    opacity: 1;
+    z-index: 1;
+}
+.decoration i{
+    color: #7A1616;
+}
+.container {
+    width: 90.5%;
+    margin: auto;
+    height: 1000px;
+    padding: 20px;
+    background: url('gallery/background-couple.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-family: 'Great Vibes', cursive;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid gold;
+    object-fit: cover;
+}
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Great Vibes', cursive;
+}
+.desc {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.bold {
+    font-weight: bold;
+    color: #FFD700;
+}
+.card {
+    position: relative;
+    max-width: 500px;
+    text-align: center;
+    height: 285px;
+}
+.card img {
+    width: 100%;
+    height: 41vh;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    width: 85%;
+}
+.text-overlay h2 {
+    font-style: italic;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: "Dancing Script", serif;
+    color: #7A1616; 
+}
+.text-overlay p{
+    color: #7A1616;
+    line-height: 1.5;
+    font-family: "Roboto", serif;
+
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.image-container img.active {
+    opacity: 1;
+    position: relative;
+}
+.container-date {
+    width: 90.5%;
+    margin: auto;
+    height: 1000px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    background: url('gallery/background-date.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+}
+.container-date h2 {
+    margin-top: 180px;
+    font-size: 46px;
+    color:rgb(121, 35, 16);
+    font-family: "Hurricane", serif;
+    padding: 0px 40px;
+    margin-bottom: 80px;
+    font-weight: 100;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #771c26;
+    margin-top: 40px; 
+    padding: 0 20px;
+}
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; 
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.time {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.time span {
+    font-size: 40px;
+    display: block;
+}
+
+.label {
+    
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.date {
+    margin-top: 40px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: "Roboto", serif;
+    font-weight: 50px;
+    color: #771c26;
+}
+
+.btn-notif {
+    display: block;
+    background: #7A1616;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px auto;
+    font-size: 14px;
+    width: 40%;
+    font-family: "Roboto", serif;
+}
+
+.btn-notif i {
+    margin-right: 5px;
+}
+
+.btn-notif:hover {
+    background: #5C0E0E;
+}
+.btn-calender {
+    display: block;
+    background: #7A1616;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    font-size: 14px;
+    width: 50%;
+    font-family: "Roboto", serif;
+}
+
+.btn-calender i {
+    margin-right: 5px;
+}
+
+.btn-calender:hover {
+    background: #5C0E0E;
+}
+.container-location {
+    width: 90.5%;
+    margin: auto;
+    height: 1000px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    background: url('gallery/background-couple.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+}
+.container-location::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url('gallery/top.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container-location::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 50%;
+    background-image: url('gallery/bottom.png'); 
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.invitation-marriage {
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.title-marriage {
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    color:rgb(240, 175, 106);
+}
+
+.details {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fae6d0;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.btn-location {
+    display: inline-block;
+    background: none;
+    color: rgb(240, 175, 106);
+    border: 2px solid rgb(240, 175, 106);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.btn-location:hover {
+    background: rgb(240, 175, 106);
+    color: white;
+}
+iframe{
+    border-radius: 10px;
+}
+.invitation-reception {
+    padding: 5px;
+    position: relative;
+    text-align: center;
+}
+.invite {
+    width: 90.5%;
+    margin: auto;
+    height: 370px;
+    padding: 20px;
+    background: url('gallery/background-invitation.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+}
+.invite-marriage {
+    padding: 30px 10px;
+    font-family: "Roboto", serif;
+    text-align: center;
+    margin: auto;
+    color: #7A1616;
+}
+.invite-marriage p{
+   line-height: 1.5;
+}
+.bold {
+    font-weight: bold;
+    color: #7A1616;
+}
