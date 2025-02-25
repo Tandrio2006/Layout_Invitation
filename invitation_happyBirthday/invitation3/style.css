@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A092A;
+    height: 100vh   ;
+}
+
+.invitation-card {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #2E1B4A, #1A092A);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: 3px solid rgba(255, 215, 0, 0.4);
+    overflow: hidden;
+}
+
+.border-design {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.6);
+    border-radius: 12px;
+}
+
+.invite-text {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.birthday-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    color: #d4af7a;
+    margin-top: 8px;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.friend-text {
+    font-size: 18px;
+    margin-top: 12px;
+    opacity: 0.85;
+}
+
+.guest-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.invite-button {
+    margin-top: 20px;
+    background: #d4af7a;
+    color: black;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.invite-button:hover {
+    background: #b8925c;
+    box-shadow: 0 6px 10px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.invite-button i {
+    font-size: 20px;
+}
