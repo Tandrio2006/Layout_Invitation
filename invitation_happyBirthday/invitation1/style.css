@@ -255,7 +255,7 @@ body {
 .container-date::before{
     content: "";
     position: absolute;
-    bottom: -630px;
+    bottom: -640px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -269,7 +269,7 @@ body {
 .container-date::after{
     content: "";
     position: absolute;
-    bottom: -1135px;
+    bottom: -1145px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;

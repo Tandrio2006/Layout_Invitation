@@ -9,28 +9,362 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Delius&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Englebert&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
-    <section class="undangan" id="hero-page">
-        <div class="invitation-card">
-            <div class="border-design"></div>
-            <p class="invite-text">You Are Invited</p>
-            <h3 class="birthday-text">Birthday Party</h3>
-            <h1 class="name">RAJJATMAN</h1>
-            <p class="friend-text">Dear My Friend:</p>
-            <h3 class="guest-name">Guests Name</h3>
-            <button class="invite-button">
-                <i class="fas fa-envelope-open"></i> Open Invitation
-            </button>
+    <div class="mobile-view">
+        <section class="undangan" id="hero-page">
+            <div class="invitation-card section" id="home">
+                <div class="corner-decor top-left"></div>
+                <div class="corner-decor top-right"></div>
+                <div class="corner-decor bottom-left"></div>
+                <div class="corner-decor bottom-right"></div>
+
+                <p class="invite-text" data-aos="fade-up" data-aos-duration="1000">You Are Invited</p>
+                <h3 class="birthday-text" data-aos="zoom-in" data-aos-delay="200">Birthday Party</h3>
+                <h1 class="name" data-aos="flip-up" data-aos-delay="400">RAJJATMAN</h1>
+                <p class="friend-text" data-aos="fade-right" data-aos-delay="600">Dear My Friend:</p>
+                <h3 class="guest-name" data-aos="fade-right" data-aos-delay="800">Guests Name</h3>
+
+                <button class="invite-button" id="button-inv" data-aos="zoom-in-up" data-aos-delay="1000">
+                    <i class="fas fa-envelope-open"></i> Open Invitation
+                </button>
+            </div>
+        </section>
+
+        <section id="main-content" class="hidden">
+            <div class="invitation-birthday">
+                <h1 class="title-birthday" data-aos="fade-down">Birthday Party</h1>
+
+                <div class="photo-birthday" data-aos="zoom-in">
+                    <img src="gallery/birthday_photo.jpg" alt="Birthday Person">
+                </div>
+
+                <h2 class="name-birthday" data-aos="fade-up" data-aos-delay="200">Rajjatman Atta</h2>
+                <p class="age-text" data-aos="fade-up" data-aos-delay="400">As He Turns Seventeenth</p>
+            </div>
+            <div class="image-container section" id="gallery">
+                <img src="gallery/image1.jpg" alt="Wedding 1" class="active">
+                <img src="gallery/image2.jpg" alt="Wedding 2">
+                <img src="gallery/image4.jpg" alt="Wedding 3">
+            </div>
+            <div class="container-time section" id="date">
+                <h1 class="title-time" data-aos="fade-down">Party Event</h1>
+
+                <div class="countdown" data-aos="zoom-in">
+                    <div class="count-box">
+                        <span id="days">288</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="hours">12</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="minutes">13</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="seconds">54</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+
+                <p class="quote" data-aos="fade-up">“17 years of laughter, love, and happiness.”</p>
+
+                <div class="event-details">
+                    <div class="detail" data-aos="fade-right">
+                        <h2>12<sup>th</sup></h2>
+                        <p>Sunday, December</p>
+                    </div>
+
+                    <div class="line" data-aos="zoom-in"></div>
+
+                    <div class="detail" data-aos="fade-right">
+                        <h2>123</h2>
+                        <p>Lorem Ipsum Street, Bali</p>
+                    </div>
+
+                    <div class="line" data-aos="zoom-in"></div>
+
+                    <div class="detail" data-aos="fade-up">
+                        <h2>5:30</h2>
+                        <p>In The Afternoon</p>
+                    </div>
+                </div>
+
+                <div class="line-gallery" data-aos="fade-up">
+                    <img src="gallery/line.png" alt="">
+                </div>
+            </div>
+
+            <section class="location-section section" id="location">
+                <div class="container-location">
+                    <h2 data-aos="fade-down">Party Location</h2>
+                    <p data-aos="fade-up">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis,
+                        pulvinar dapibus leo.
+                    </p>
+
+                    <div class="image-containers" data-aos="zoom-in">
+                        <img src="gallery/location.jpg" alt="Party Location">
+                    </div>
+
+                    <div class="location" data-aos="fade-up">
+                        <div class="icon" data-aos="zoom-in">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h2 data-aos="fade-right">Sanur Garden</h2>
+                        <p data-aos="fade-right">
+                            Jl. Hang Tuah, Sanur Kaja, Kec. Denpasar Sel., Kota Denpasar, Bali 80239
+                        </p>
+                        <p data-aos="fade-right">Sanurgarden@katy.com</p>
+                        <p data-aos="fade-right">(0366) 201506</p>
+                        <a href="#" class="button" data-aos="zoom-in">Open Map</a>
+                    </div>
+                </div>
+            </section>
+            <div class="line-gallery" data-aos="fade-up">
+                <img src="gallery/line.png" alt="">
+            </div>
+            <section class="gift-section section" id="gift">
+                <h2 class="gift-title" data-aos="fade-down">Send Your Gift</h2>
+                <p class="gift-text" data-aos="fade-up">
+                    Thank you for adding a spirit of joy to your birthday by giving your best gift
+                </p>
+
+                <div class="gift-container" data-aos="zoom-in">
+                    <select class="gift-select" data-aos="fade-right">
+                        <option>Donate via Paypal</option>
+                        <option>Donate via Bank Transfer</option>
+                        <option>Donate via Bitcoin</option>
+                    </select>
+                    <button class="gift-copy" data-aos="fade-right">COPY</button>
+                </div>
+            </section>
+            <section class="rsvp-section">
+                <h2 class="rsvp-title" data-aos="fade-down">RSVP</h2>
+
+                <form class="rsvp-form">
+                    <label for="name" data-aos="fade-right">Your Name</label>
+                    <input type="text" id="name" placeholder="Write your name here" data-aos="fade-right">
+
+                    <label for="guests" data-aos="fade-right">How many guests with you?</label>
+                    <select id="guests" data-aos="fade-right">
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                        <option>More</option>
+                    </select>
+
+                    <label for="attendance" data-aos="fade-right">Will you be there?</label>
+                    <select id="attendance" data-aos="fade-right">
+                        <option>I'll definitely be there</option>
+                        <option>Not sure yet</option>
+                        <option>Sorry, I can't make it</option>
+                    </select>
+
+                    <label for="wishes" data-aos="fade-right">Your Wishes</label>
+                    <textarea id="wishes" placeholder="Give words of blessing and prayer"
+                        data-aos="fade-right"></textarea>
+
+                    <button type="submit" class="rsvp-btn" data-aos="zoom-in">
+                        <i class="fa-solid fa-paper-plane"></i> SEND RSVP
+                    </button>
+                </form>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text" data-aos="fade-up">
+                    It is a joy and honor if my friends are willing to attend and give their best prayers
+                </p>
+                <p class="best-regards" data-aos="fade-up" data-aos-delay="200">Best Regards.</p>
+                <p class="footer-name" data-aos="fade-up" data-aos-delay="400">Rajjatman</p>
+                <p class="copyright" data-aos="fade-up" data-aos-delay="600">
+                    Copyright 2024 @ <span class="highlight">MettaInvitation</span> - All Rights Reserved
+                </p>
+            </footer>
+            <div class="content-audio fade-in">
+                <div class="music-button" id="musicButton">
+                    <img src="gallery/icon-music.png" alt="Music Icon">
+                </div>
+                <audio id="mySong">
+                    <source src="media/song.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="menu-container fade-in">
+                <div class="menu-options">
+                    <button onclick="scrollToSection('home', this)" class="menu-button">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="menu-text">Home</span>
+                    </button>
+                    <button onclick="scrollToSection('gallery', this)" class="menu-button">
+                        <i class="fa-regular fa-images"></i>
+                        <span class="menu-text">Gallery</span>
+                    </button>
+                    <button onclick="scrollToSection('date', this)" class="menu-button">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span class="menu-text">Date</span>
+                    </button>
+                    <button onclick="scrollToSection('location', this)" class="menu-button">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="menu-text">Location</span>
+                    </button>
+                    <button onclick="scrollToSection('gift', this)" class="menu-button">
+                        <i class="fa-solid fa-gift"></i>
+                        <span class="menu-text">Gift</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="desktop-view">
+        <div class="image-desktop">
+            <img src="gallery/dekstop-view.jpg" alt="Foto">
         </div>
-    </section>
+        <div class="text-desktop">
+            Silahkan akses undangan ini melalui hand phone anda. Terima kasih.
+        </div>
+    </div>
+    <script>
+        document.getElementById("button-inv").addEventListener("click", function () {
+            const mainContent = document.getElementById("main-content");
+
+            // Menampilkan main-content jika masih tersembunyi
+            if (mainContent.classList.contains("hidden")) {
+                mainContent.classList.remove("hidden");
+            }
+
+            // Scroll otomatis ke main-content
+            mainContent.scrollIntoView({ behavior: "smooth" });
+        });
+
+        const musicButton = document.getElementById("musicButton");
+        const mySong = document.getElementById("mySong");
+
+        mySong.addEventListener("ended", function () {
+            mySong.currentTime = 0;
+            mySong.play();
+        });
+
+        musicButton.addEventListener("click", function () {
+            if (mySong.paused) {
+                mySong.play();
+                musicButton.classList.add("active");
+            } else {
+                mySong.pause();
+                musicButton.classList.remove("active");
+            }
+        });
+
+        document.getElementById("button-inv").addEventListener("click", function () {
+            if (mySong.paused) {
+                mySong.play();
+                musicButton.classList.add("active");
+            }
+        });
+
+
+        const imagess = document.querySelectorAll(".image-container img");
+        let currentIndex = 0;
+
+        function changeImage() {
+            imagess[currentIndex].classList.remove("active"); // Hilangkan gambar aktif
+
+            currentIndex = (currentIndex + 1) % imagess.length; // Ganti ke gambar berikutnya
+
+            imagess[currentIndex].classList.add("active"); // Tambahkan gambar aktif
+        }
+        setInterval(changeImage, 4000);
+
+        function startCountdown(targetDate) {
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance <= 0) {
+                    document.getElementById("days").innerHTML = "00";
+                    document.getElementById("hours").innerHTML = "00";
+                    document.getElementById("minutes").innerHTML = "00";
+                    document.getElementById("seconds").innerHTML = "00";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+
+        // Set target countdown date (ubah sesuai keperluan)
+        const countdownDate = new Date("2025-12-31T23:59:59").getTime();
+        startCountdown(countdownDate);
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const buttons = document.querySelectorAll('.menu-button');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        setTimeout(() => {
+                            buttons.forEach(button => button.classList.remove('active'));
+                            const activeButton = document.querySelector(`.menu-button[onclick*="${id}"]`);
+                            if (activeButton) {
+                                activeButton.classList.add('active');
+                            }
+                        }, 100);  // Menunda proses sedikit agar scroll lebih lancar
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.3
+            });
+
+
+            sections.forEach(section => observer.observe(section));
+        });
+        function scrollToSection(sectionId, button) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            const buttons = document.querySelectorAll('.menu-button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+        document.getElementById("button-inv").addEventListener("click", function (event) {
+            event.preventDefault();
+
+            document.getElementById("main-content").style.display = "block";
+
+            AOS.refresh();
+        });
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/f89fc2c44e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+        });
+    </script>
 </body>
-<script></script>
 
 </html>

@@ -1,0 +1,471 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #192040;
+}
+.container-home{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('gallery/grand_opening.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 100%;
+  padding: 0px 20px;
+  height: 100vh;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+    margin-top: 130px;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0px;
+}
+
+.title {
+    margin-top: 0px;
+    font-family: "Playfair Display", serif;
+  font-size: 60px;
+  margin: 10px 0;
+  font-weight: 200;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+}
+
+.count-box {
+    background-color: #F7D187;
+    color: #2E1A47;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.count-box span {
+    margin-top: 5px;
+    font-size: 20px;
+    display: block;
+}
+.count-box p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+}
+
+.contact-btn {
+  background-color: #f4d195;
+  color: #16162d;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 3px solid #16162d;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  box-shadow: 3px 3px 0px #16162d;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-btn:hover {
+  background-color: #e3ba85;
+  box-shadow: 1px 1px 0px #16162d;
+}
+.container-location {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+.container-location h2 {
+  font-size:  36px;
+  font-weight: 200;
+  font-family: "Playfair Display", serif;
+  color: #F7D187;
+}
+.container-location p {
+  font-size: 16px;
+  color:rgb(240, 240, 240);
+  margin: 10px 0 20px;
+  line-height: 1.5;
+  font-family: "Playfair Display", serif;
+}
+.iframe-containers iframe {
+  border-radius: 10px;
+}
+.location {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.icon {
+  font-size: 50px;
+  color: #d4af7a;
+}
+.location h2 {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+}
+.location p {
+  font-size: 16px;
+  color: white;
+  margin: 5px 0;
+  font-family: "Playfair Display", serif;
+}
+.button {
+  display: inline-block;
+  background-color: #d4af7a;
+  color: #192040;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  border: 2px solidrgb(187, 153, 105);
+}
+.button:hover {
+  background-color: #b8925c;
+}
+.line-gallery{
+  margin-top: 20px;
+  pointer-events: none;
+  height: 60px;
+  object-fit: contain;
+}
+.line-gallery img{
+  width: 100%;
+}
+.container-gallery h1{
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 200;
+  margin-top: 0px;
+  padding: 30px;
+  color: #d4af7a;
+}
+.gallery-container {
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.main-image img.active {
+  display: block;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s, filter 0.3s;
+  border-radius: 5px;
+  filter: grayscale(100%);
+}
+.thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+  border-radius: 5px;
+}
+
+.thumbnails img.active {
+  filter: grayscale(0%); 
+  border: 2px solid  #d4a35f; 
+}
+
+.thumbnails img:hover {
+  filter: grayscale(0%); 
+}
+.rsvp{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-container {
+  color: #F7D187;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.reservation-title {
+  font-family: "Playfair Display", serif;
+  margin-top: 0;
+  font-size: 34px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.reservation-title span {
+  display: block;
+}
+
+.reservation-text {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  width: 93%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #F7D187;
+  font-family: "Playfair Display", serif;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.reservation-form textarea {
+  height: 80px;
+  resize: none;
+  font-family: "Playfair Display", serif;
+}
+
+.reservation-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #F7D187;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #192040;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Playfair Display", serif;
+}
+
+.reservation-form button:hover {
+  background-color: #e6b86c;
+}
+.container-footer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  color: #F7D187;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Playfair Display', serif;
+  height: 150px;
+}
+
+.copyright {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #F7D187;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e6b86c;
+}
+
+.hidden{
+    display: none;
+}
+.desktop-view {
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.image-desktop img {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto;
+    border-radius: 5px;
+}
+
+.text-desktop {
+    margin-top: 20px;
+    font-size: 4vw; 
+    font-style: italic;
+    color: white;
+    max-width: 90%;
+}
+.menu-container {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.menu-options {
+  display: flex;
+  padding: 8px 10px;
+  gap: 5px;
+  background-color: #F7D187;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+  background-color: #F7D187;
+  color: #192040;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px;
+}
+
+.menu-button i {
+  transition: opacity 0.3s ease;
+}
+.menu-text {
+  display: none;
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.menu-button:hover {
+  background-color: #192040;
+}
+
+.menu-button.active {
+  width: auto;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #192040;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-button.active i {
+  opacity: 1;
+}
+
+.menu-button.active .menu-text {
+  display: inline;
+}
+.music-button {
+  width: 45px;
+  height: 45px;
+  background-color: #B0B0B0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.music-button img {
+  width: 90%;
+  height: auto;
+}
+.music-button.active {
+  background-color: #F7D187;
+}
+
+@media (max-width: 425px) {
+    .desktop-view { display: none; }
+}
+@media (min-width: 426px) {
+    .mobile-view { display: none; }
+}
